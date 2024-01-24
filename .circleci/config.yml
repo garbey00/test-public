@@ -29,7 +29,7 @@ workflows:
         - say-hello:
             filters:
               branches:
-                only: test2
+                only: test
   testmarc2:
     jobs:
         - say-hello:
