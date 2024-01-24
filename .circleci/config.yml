@@ -34,7 +34,5 @@ workflows:
     jobs:
         - say-hello:
             filters:
-              branches:
-                only: test
               tags:
                 only: /^img_.*/
