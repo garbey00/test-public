@@ -24,13 +24,13 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-  testmarc1: # Job for docker deployment on test. Only on docker branch.
+  testmarc1:
     jobs:
         - say-hello:
             filters:
               branches:
-                only: test
-  testmarc2: # Job for docker deployment on test. Only on docker branch.
+                only: test2
+  testmarc2:
     jobs:
         - say-hello:
             filters:
