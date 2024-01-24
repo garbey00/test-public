@@ -24,3 +24,17 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+  testmarc1:
+    jobs:
+        - say-hello:
+            filters:
+              tags:
+                ignore: /^img_.*/
+  testmarc2:
+    jobs:
+        - say-hello:
+            filters:
+              tags:
+                only: /^img_.*/
+              branches:
+                ignore: /.*/ # only deploy when on main
